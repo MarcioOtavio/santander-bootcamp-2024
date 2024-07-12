@@ -1,0 +1,43 @@
+# Santander Bootcamp 2024
+Java RESTful API  criada para o santander bootcamp 2024
+
+## Diagrama de classes
+
+```mermaid
+classDiagram
+    class User {
+        +String name
+        +Account account
+        +Feature[] features
+        +Card card
+        +News[] news
+    }
+
+    class Account {
+        +String number
+        +String agency
+        +String balance
+        +Double limit
+        +String date
+    }
+
+    class Feature {
+        +String icon
+        +String description
+    }
+
+    class Card {
+        +String number
+        +Double cardLimit
+    }
+
+    class News {
+        +String icon
+        +String description
+    }
+
+    User "1" *-- "1" Account
+    User "1" *-- "N" Feature
+    User "1" *-- "1" Card
+    User "1" *-- "N" News
+```
